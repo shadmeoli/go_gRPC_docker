@@ -1,12 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
 
-import { 'regex' }
-
-
-type User struct {
-	name string
-	email	string
-	phoneNumber int
-	password string
+func main() {
+	fmt.Println("home")
 }
