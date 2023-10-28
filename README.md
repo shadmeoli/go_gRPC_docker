@@ -101,6 +101,9 @@ Go is compiled to machine code yet has the convenience of garbage collection and
 
 # Project setup and file structure
 
+I will be making a basic API in go to showcase the same.
+I learning go as doing this project so pardon my project layout and file placements
+
 ---
 
 # Source code
