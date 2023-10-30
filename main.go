@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/julienschmidt/httprouter"
-	"google.golang.org/grpc"
-	"net/http"
+	"os"
 )
 
-func entry(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "")
+func server() {
+	var pid any
+	pid = os.Getppid()
+
+	fmt.Println(pid)
 }
 
 func main() {
-	fmt.Println("home")
+	fmt.Println("Hello world")
+	server()
 }
