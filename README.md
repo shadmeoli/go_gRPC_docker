@@ -135,6 +135,8 @@ I learning go as doing this project so pardon my project layout and file placeme
 └── web
 ```
 
+Here is how the app is structured
+
 ---
 
 # Source code
