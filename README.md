@@ -104,6 +104,37 @@ Go is compiled to machine code yet has the convenience of garbage collection and
 I will be making a basic API in go to showcase the same.
 I learning go as doing this project so pardon my project layout and file placements
 
+> file structure
+
+```sh
+
+.
+├── api
+│   └── v1
+│       └── routes
+│           └── routes.go
+├── cmd
+│   └── myapi
+│       └── main.go
+├── Dockerfile
+├── go.mod
+├── go.sum
+├── internal
+│   ├── api
+│   │   ├── api.go
+│   │   └── handlers
+│   └── app
+│       ├── app.go
+│       ├── config
+│       ├── database
+│       │   └── postgres
+│       │       └── postgres.go
+│       └── middleware
+├── README.md
+├── scripts
+└── web
+```
+
 ---
 
 # Source code
