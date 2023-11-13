@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"html/template"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
-	"html/template"
 )
 
 type Note struct {
@@ -35,16 +36,9 @@ func main() {
 		db.Find(&notes)
 
 		// Render the HTML template with the notes
-		tmpl, err := template.New("notes").Parse(`<div id="notes-container" class="h-[50%] w-full flex flex-col justify-center items-center rounded-xl p-10">
-            {{range .Notes}}
-                <div class="w-full min-h-20 h-auto bg-gray-800 rounded-lg p-4">
-                    <h1 class="text-center text-gray-400">{{.Text}}</h1>
-                </div>
-            {{else}}
-                <h1 class="text-center text-gray-400 animate-pulse">Notes will appear here</h1>
-            {{end}}
-        </div>`)
+		tmpl, err := template.New("notes").Parse(`index.html`)
 		if err != nil {
+			fmt.Println(err)
 			return err
 		}
 
