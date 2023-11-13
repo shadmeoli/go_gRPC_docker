@@ -22,9 +22,9 @@
         <h1 class="text-center text-gray-400 animate-pulse">Notes will appear here</h1>
       </div>
 
-      <div class="w-full h-full flex flex-col items-center justify-center mt-2">
+      <div class="w-full h-full flex flex-col items-center justify-center">
         <h1 class="text-3xl text-center text-gray-400">Keymaps</h1>
-        <h1 class="text-center text-gray-600">alt + n - New note</h1>
+        <h1 class="text-center text-gray-600 mt-4">alt + n - New note</h1>
         <h1 class="text-center text-gray-600">alt + s - save</h1>
         <h1 class="text-center text-gray-600">alt + x - delete note</h1>
       </div>
@@ -36,7 +36,7 @@
         <h2 class="text-xl text-white font-semibold mb-4">Create a New Note</h2>
         <textarea id="noteText"
           class="text-white w-full bg-gray-500 bg-opacity-40 h-[60%] rounded p-2 mb-4 placeholder-white"
-          placeholder="Enter your note" placeholdercolor="white"></textarea>
+          placeholder="Enter your note" placeholdercolor="gray"></textarea>
         <div class="flex justify-end">
           <button class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-500" onclick="saveNote()">Save</button>
           <button class="px-4 py-2 ml-2 bg-red-300 rounded hover:bg-gray-200" onclick="closeModal()">Cancel</button>
@@ -47,44 +47,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 
-  <script>
-    function openModal() {
-      const modal = document.getElementById('newNoteModal');
-      if (modal) {
-        modal.classList.remove('hidden');
-      }
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('newNoteModal');
-      if (modal) {
-        modal.classList.add('hidden');
-      }
-    }
-
-    function saveNote() {
-      const noteText = document.getElementById('noteText').value;
-      // Perform actions to save the new note, e.g., sending it to the server
-      console.log('New note saved:', noteText);
-      closeModal();
-    }
-
-    document.addEventListener('keydown', function (event) {
-      if (event.altKey && event.key === 'n') {
-        // Alt + n is pressed, execute New note action
-        event.preventDefault(); // Prevent the default browser behavior
-        openModal();
-      } else if (event.altKey && event.key === 's') {
-        // Alt + s is pressed, execute Save action
-        event.preventDefault(); // Prevent the default browser behavior
-        saveNote();
-      } else if (event.altKey && event.key === 'x') {
-        // Alt + x is pressed, execute Delete note action
-        event.preventDefault(); // Prevent the default browser behavior
-        console.log('Delete note action');
-      }
-    });
-  </script>
+  <script></script>
 </body>
 
 </html>
