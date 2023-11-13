@@ -107,32 +107,21 @@ I learning go as doing this project so pardon my project layout and file placeme
 > file structure
 
 ```sh
-
 .
-├── api
-│   └── v1
-│       └── routes
-│           └── routes.go
-├── cmd
-│   └── myapi
-│       └── main.go
 ├── Dockerfile
 ├── go.mod
 ├── go.sum
-├── internal
-│   ├── api
-│   │   ├── api.go
-│   │   └── handlers
-│   └── app
-│       ├── app.go
-│       ├── config
-│       ├── database
-│       │   └── postgres
-│       │       └── postgres.go
-│       └── middleware
+├── pkg
+├── public
 ├── README.md
-├── scripts
-└── web
+├── server.go
+├── src
+├── tmp
+│   └── main
+└── views
+    └── index.html
+
+5 directories, 7 files
 ```
 
 Here is how the app is structured
