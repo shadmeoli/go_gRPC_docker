@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="h-screen w-screen bg-gray-950 flex flex-col justify-center px-20 space-y-4">
+  <div class="h-screen w-screen bg-gray-950 flex flex-col justify-center px-20 md:px-[28%] space-y-4">
     <div class="h-20 bg-gray-800 w-full rounded-xl flex items-center justify-between px-4 py-2">
       <h1 class="text-white text-xl">Notes</h1>
       <button
@@ -30,10 +30,12 @@
       </div>
     </div>
 
-    <div id="newNoteModal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
-      <div class="bg-gray-600 rounded-lg p-6 w-1/2">
+    <div id="newNoteModal"
+      class="fixed inset-0 flex items-center justify-center z-10 hidden backdrop-blur bg-opacity-40">
+      <div class="bg-gray-600 bg-opacity-40 h-[40%] flex flex-col items-center justify-center rounded-lg p-6 w-1/2">
         <h2 class="text-xl text-white font-semibold mb-4">Create a New Note</h2>
-        <textarea id="noteText" class="w-full bg-gray-500 h-32 rounded p-2 mb-4 placeholder-white"
+        <textarea id="noteText"
+          class="text-white w-full bg-gray-500 bg-opacity-40 h-[60%] rounded p-2 mb-4 placeholder-white"
           placeholder="Enter your note" placeholdercolor="white"></textarea>
         <div class="flex justify-end">
           <button class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-500" onclick="saveNote()">Save</button>
