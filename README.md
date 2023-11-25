@@ -1,6 +1,6 @@
 ---
 theme: /home/meoli/.config/slides/theme.json
-author: Shadrack Meoli
+author: Shad
 ---
 
 # Go + gRPC + Docker
@@ -131,5 +131,7 @@ Here is how the app is structured
 # Source code
 
 Repo: [github]("https://github.com/shadmeoli/go_gRPC")
+
+> Why I am doing this? To learn Go better
 
 ####

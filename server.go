@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"html/template"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"gorm.io/driver/sqlite"
@@ -30,13 +29,14 @@ func main() {
 	app.Use(logger.New())
 
 	// Serve HTML content
+
 	app.Get("/", func(c *fiber.Ctx) error {
 		// Retrieve all notes from the database
 		var notes []Note
 		db.Find(&notes)
 
 		// Render the HTML template with the notes
-		tmpl, err := template.New("notes").Parse(`index.html`)
+		tmpl, err := template.ParseFiles("./views/index.html")
 		if err != nil {
 			fmt.Println(err)
 			return err
